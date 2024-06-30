@@ -34,7 +34,7 @@ export function Mint() {
       <p>
         The supply is{" "}
         {totalSupply.data !== undefined &&
-          formatUnits(totalSupply.data, 18).split(".")[0]}
+          formatUnits(totalSupply.data as bigint, 18).split(".")[0]}
       </p>
     </section>
   );
