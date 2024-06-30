@@ -2,6 +2,7 @@ import { Banana } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useAccount, useDisconnect } from "wagmi";
 import { Account, Button } from "@/components";
+import { useBanana } from "@/hooks/useBanana";
 
 export function Navbar() {
   const account = useAccount();
@@ -26,9 +27,7 @@ export function Navbar() {
         <div className="flex gap-2 mr-2">
           <Account />
           <Button
-            onClick={() => {
-              disconnect();
-            }}
+            onClick={() => disconnect()}
             className="bg-yellow-400 hover:bg-yellow-400/75 flex gap-2 text-xl text-black py-6 justify-center items-center"
           >
             Disconnect
