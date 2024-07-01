@@ -10,4 +10,5 @@
 - [x] Mint
 - [x] View supply
 - [x] View current balance
-- [ ] Allowance
+- [ ] Allow others to spend tokens
+- [ ] Check how much i can spend other tokens

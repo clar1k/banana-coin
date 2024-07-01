@@ -1,1 +1,1 @@
-export * from "./Banana.abi";
+export * from "./banana.abi";

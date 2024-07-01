@@ -126,13 +126,8 @@ export const abi: Abi = [
   },
   {
     type: "function",
-    name: "burnFromBalance",
+    name: "burn",
     inputs: [
-      {
-        name: "_from",
-        type: "address",
-        internalType: "address",
-      },
       {
         name: "_value",
         type: "uint256",
@@ -276,5 +271,55 @@ export const abi: Abi = [
       },
     ],
     stateMutability: "nonpayable",
+  },
+  {
+    type: "event",
+    name: "Approval",
+    inputs: [
+      {
+        name: "_owner",
+        type: "address",
+        indexed: true,
+        internalType: "address",
+      },
+      {
+        name: "_spender",
+        type: "address",
+        indexed: true,
+        internalType: "address",
+      },
+      {
+        name: "_value",
+        type: "uint256",
+        indexed: false,
+        internalType: "uint256",
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: "event",
+    name: "Transfer",
+    inputs: [
+      {
+        name: "_from",
+        type: "address",
+        indexed: true,
+        internalType: "address",
+      },
+      {
+        name: "_to",
+        type: "address",
+        indexed: true,
+        internalType: "address",
+      },
+      {
+        name: "_value",
+        type: "uint256",
+        indexed: false,
+        internalType: "uint256",
+      },
+    ],
+    anonymous: false,
   },
 ] as const;

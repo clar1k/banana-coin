@@ -7,7 +7,6 @@ import { useBanana } from "@/hooks/useBanana";
 export function Navbar() {
   const account = useAccount();
   const { disconnect } = useDisconnect();
-
   return (
     <nav className="flex w-full justify-between items-center h-16 text-3xl">
       <div className="flex justify-center items-center gap-4 ml-5">
@@ -21,6 +20,9 @@ export function Navbar() {
         )}
         <Link className="p-2" to="/mint">
           Mint
+        </Link>
+        <Link className="p-2" to="/allowance">
+          Allowance
         </Link>
       </div>
       {account.isConnected && (

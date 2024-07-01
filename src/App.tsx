@@ -1,4 +1,4 @@
-import { Home, Mint } from "./pages";
+import { Home, Mint, Allowance } from "./pages";
 import { Web3ModalProvider } from "./providers/Web3ModalProvider/Web3ModalProvider";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "@/components";
@@ -13,6 +13,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/mint" element={<Mint />} />
+            <Route path="/allowance" element={<Allowance />} />
           </Routes>
         </Web3ModalProvider>
       </Router>
